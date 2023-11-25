@@ -8,6 +8,7 @@ TagManager:
   - TargetA
   - TargetA_Bullseye
   - Bullet
+  - EnemyABullet
   layers:
   - Default
   - TransparentFX

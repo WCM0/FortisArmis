@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class SceneChanger : MonoBehaviour
 {
-   public void LoadMain()
+   public void LoadTitle()
     {
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        SceneManager.LoadScene("TitleScreen", LoadSceneMode.Single);
     }
 
     public void ReloadGame()
@@ -18,7 +18,7 @@ public class SceneChanger : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("Catch-A-Cat_Ver1.0", LoadSceneMode.Single);
+        SceneManager.LoadScene("FirstLevel", LoadSceneMode.Single);
     }
 
 

@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
     private InputAction jumpAction;
     private InputAction shootAction;
 
+
   
 
     //private float _currentVelocity;
