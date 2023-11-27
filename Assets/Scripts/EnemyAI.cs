@@ -11,25 +11,25 @@ public class EnemyShooting : MonoBehaviour
     public float attackRange = 180f;  // Range to start shooting
     public float shootInterval = 0.5f;  // Time interval between shots
     public float bulletSpeed = 10f;  // Speed of the bullet
-    //public float moveSpeed = 5f;  // Enemy movement speed
+    public float moveSpeed = 5f;  // Enemy movement speed
 
-    //private NavMeshAgent navMeshAgent;
+    private NavMeshAgent navMeshAgent;
 
 
     private bool canShoot = true;
 
     public AudioSource gunSound;
 
-    //void Start()
-    // {
-    // Get the NavMeshAgent component attached to the enemy
-    //   navMeshAgent = GetComponent<NavMeshAgent>();
+    void Start()
+     {
+     //Get the NavMeshAgent component attached to the enemy
+      navMeshAgent = GetComponent<NavMeshAgent>();
 
-    //   if (navMeshAgent == null)
-    //  {
-    //        Debug.LogError("NavMeshAgent component not found on enemy.");
-    //    }
-    //  }
+     if (navMeshAgent == null)
+     {
+          Debug.LogError("NavMeshAgent component not found on enemy.");
+       }
+     }
 
     void Update()
     {
@@ -39,7 +39,7 @@ public class EnemyShooting : MonoBehaviour
            
 
             // Player is detected, set destination to player's position
-           // navMeshAgent.SetDestination(player.position);
+            navMeshAgent.SetDestination(player.position);
 
             // Check if the player is within attack range
             if (Vector3.Distance(transform.position, player.position) <= attackRange)

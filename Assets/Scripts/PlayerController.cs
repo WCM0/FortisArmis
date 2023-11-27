@@ -43,14 +43,13 @@ public class PlayerController : MonoBehaviour
     public AudioSource gunSound;
 
 
-
     WaitForSeconds rapidFireWait;
 
     private InputAction moveAction;
     private InputAction jumpAction;
     private InputAction shootAction;
 
-
+    
   
 
     //private float _currentVelocity;
@@ -58,7 +57,7 @@ public class PlayerController : MonoBehaviour
 
     Coroutine _RapidFire;
 
-    
+   
 
     //[SerializeField]
     //private float smoothTime = 0.5f;
@@ -80,7 +79,11 @@ public class PlayerController : MonoBehaviour
         jumpAction = _playerInput.actions["Jump"];
         shootAction = _playerInput.actions["FireGun"];
         //pauseGame = _playerInput.actions["Pause"];
-        
+
+       
+
+       
+
         //Cursor.lockState = CursorLockMode.Locked;
 
         
@@ -144,8 +147,6 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed);
 
 
-       
-
 
     }
 
@@ -202,9 +203,6 @@ public class PlayerController : MonoBehaviour
         }
        
     }
-
-
-
 
 
 
