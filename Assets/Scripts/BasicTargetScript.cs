@@ -7,7 +7,7 @@ public class BasicTargetScript : MonoBehaviour
 {
 
     public int _damage;
-
+    public ParticleSystem _ParticleSystem;
   
     
     
@@ -17,7 +17,7 @@ public class BasicTargetScript : MonoBehaviour
     {
 
 
-        _damage = 3;
+        _damage = 5;
       
 
     }
@@ -28,8 +28,9 @@ public class BasicTargetScript : MonoBehaviour
        
         if(_damage == 0)
         {
+            _ParticleSystem.Play();
             Destroy(gameObject);
-            
+           
         }
     }
 
