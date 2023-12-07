@@ -39,7 +39,7 @@ public class EnemyShooting : MonoBehaviour
            
 
             // Player is detected, set destination to player's position
-            navMeshAgent.SetDestination(player.position);
+            //navMeshAgent.SetDestination(player.position);
 
             // Check if the player is within attack range
             if (Vector3.Distance(transform.position, player.position) <= attackRange)

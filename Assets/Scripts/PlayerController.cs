@@ -32,15 +32,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Transform bulletParent;
     [SerializeField]
-    private float bulletHitMissDistance = 25f;
+    private float bulletHitMissDistance = 50f;
 
     [SerializeField]
-    private float fireRate = 60f;
+    private float fireRate = 20f;
 
 
     public ParticleSystem shellOut;
 
     public AudioSource gunSound;
+
+    public float _dashMultiplier = 4f;
 
 
     WaitForSeconds rapidFireWait;
@@ -115,7 +117,7 @@ public class PlayerController : MonoBehaviour
 
        move.y = 0f;
 
-        controller.Move(move * Time.deltaTime * playerSpeed * 4);
+        controller.Move(move * Time.deltaTime * playerSpeed * _dashMultiplier);
 
         //if (input.sqrMagnitude == 0) return;
 

@@ -5,10 +5,10 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
 
-    [SerializeField]
-    private GameObject bulletDecal;
+    //[SerializeField]
+    //private GameObject bulletDecal;
 
-    private float speed = 50f;
+    private float speed = 200f;
     private float timeToDestroy = 1.0f;
 
     public Vector3 target { get; set; }
