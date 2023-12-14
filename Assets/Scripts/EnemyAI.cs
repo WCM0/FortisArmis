@@ -7,11 +7,11 @@ public class EnemyShooting : MonoBehaviour
     public Transform gunTransform;  // Reference to the gun's transform
     public GameObject bulletPrefab;  // Prefab of the bullet
     public Transform firePoint;  // Point where the bullet is instantiated
-    public float detectionRadius = 30f;  // Radius to detect the player
-    public float attackRange = 20f;  // Range to start shooting
+    public float detectionRadius = 100f;  // Radius to detect the player
+    public float attackRange = 100f;  // Range to start shooting
     public float shootInterval = 0.5f;  // Time interval between shots
-    public float bulletSpeed = 10f;  // Speed of the bullet
-    public float moveSpeed = 5f;  // Enemy movement speed
+    public float bulletSpeed = 100f;  // Speed of the bullet
+    public float moveSpeed = 2f;  // Enemy movement speed
 
     private NavMeshAgent navMeshAgent;
 

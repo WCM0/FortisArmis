@@ -8,9 +8,10 @@ public class BasicTargetScript : MonoBehaviour
 
     public int _damage;
     public ParticleSystem _ParticleSystem;
-  
-    
-    
+
+    public ParticleSystem _BulletStrike;
+
+    public AudioSource _RicochetSound;
     
     // Start is called before the first frame update
     void Start()
@@ -28,8 +29,7 @@ public class BasicTargetScript : MonoBehaviour
        
         if(_damage == 0)
         {
-            _ParticleSystem.Play();
-            Destroy(gameObject);
+          StartCoroutine(EnemyDestroy());
            
         }
     }
@@ -43,13 +43,22 @@ public class BasicTargetScript : MonoBehaviour
         if (other.tag == "Bullet")
         {
             Debug.Log("Hit! Damage +1 Points +50");
-
-          
+            _BulletStrike.Play();
+            _RicochetSound.Play();
             _damage -= 1;
         }
     }
 
-  
+  IEnumerator EnemyDestroy()
+    {
+       _ParticleSystem.Play();
+        
+
+       yield return new WaitForSeconds(0.1f);
+
+        
+       Destroy(gameObject);
+    }
 
 }
 
